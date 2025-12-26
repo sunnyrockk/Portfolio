@@ -1,0 +1,62 @@
+"use client"
+
+import { Button } from "@/components/ui/button"
+import { FileText, Mail } from "lucide-react"
+
+export function ContactSection() {
+  return (
+    <section id="contact">
+      <div className="container max-w-5xl py-24">
+        <div className="mb-12 text-center">
+          <div className="mb-4 inline-block rounded-full bg-foreground px-4 py-1.5 text-sm text-background">
+            Contact
+          </div>
+          <h2 className="mb-6 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 bg-clip-text text-5xl font-bold tracking-tight text-transparent">
+            Get in Touch
+          </h2>
+          <p className="mx-auto max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
+            Want to chat? Feel free to reach out via email or connect with me on{" "}
+            <a
+              href="https://www.linkedin.com/in/sunny-mall"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              LinkedIn
+            </a>
+            . I&apos;m always open to discussing new projects and opportunities!
+          </p>
+        </div>
+
+        <div className="mb-8 flex items-center justify-center gap-2 text-muted-foreground">
+          <Mail className="h-5 w-5" />
+          <a
+            href="mailto:sunnypratap859@gmail.com"
+            className="text-lg hover:text-foreground hover:underline transition-colors"
+          >
+            sunnypratap859@gmail.com
+          </a>
+        </div>
+
+        <div className="flex justify-center gap-4">
+          <Button
+            size="lg"
+            className="bg-foreground px-8 text-background transition-all hover:scale-105 hover:bg-foreground/90 active:scale-95"
+            onClick={() => window.open("mailto:sunnypratap859@gmail.com", "_blank")}
+          >
+            Contact Me
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            className="gap-2 bg-transparent px-8 transition-all hover:scale-105 active:scale-95"
+          >
+            <FileText className="h-4 w-4" />
+            View Resume
+          </Button>
+        </div>
+        {/* </CHANGE> */}
+      </div>
+    </section>
+  )
+}
